@@ -1,0 +1,6 @@
+@import url("https://assets.rockarch.org/v2.0.9/main.min.css");
+
+#main {
+  grid-column: 2 / span 10;
+  margin-bottom: 30px;
+}
