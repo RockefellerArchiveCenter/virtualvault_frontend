@@ -1,0 +1,39 @@
+name: Test
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - development
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6.0.2
+
+      - name: Use Node.js ${{ matrix.node_version }}
+        uses: actions/setup-node@v6.3.0
+        with:
+          node-version: 'lts/*'
+
+      - name: Cache dependencies
+        uses: actions/cache@v5.0.4
+        id: yarn-cache
+        with:
+          path: ./node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Lint code
+        run: yarn lint
+
+      - name: Test build
+        run: yarn test
+
