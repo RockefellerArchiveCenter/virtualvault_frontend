@@ -2,7 +2,7 @@
  * For a detailed explanation regarding each configuration property, visit:
  * https://jestjs.io/docs/configuration
  */
-const nextJest = require('next/jest')
+import nextJest from 'next/jest';
 
 /** @type {import('jest').Config} */
 const createJestConfig = nextJest({
@@ -203,4 +203,4 @@ const config = {
 };
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
-module.exports = createJestConfig(config)
+export default createJestConfig(config)
