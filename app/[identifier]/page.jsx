@@ -14,7 +14,7 @@ const Viewer = ({ category, url }) => {
   switch (category) {
     case "catalogued-reports":
       return (
-      <object data={url} type="application/pdf" style={{width: "90%", height: "100vh"}}>
+      <object className="viewer full-height" data={url} type="application/pdf">
         <p>
           Your browser doesn&apos;t support object embedding. <a href={url}>Download</a> the PDF instead.
         </p>
@@ -22,7 +22,7 @@ const Viewer = ({ category, url }) => {
     )
     case "audio":
       return (
-        <audio data-type="audio" controls style={{width: "90%"}}>
+        <audio className="viewer" data-type="audio" controls>
           <source src={url} type="audio/mp3" />
           <p>
             Your browser doesn&apos;t support HTML5 audio. <a href={url} download>Download</a> the audio instead.
@@ -31,7 +31,7 @@ const Viewer = ({ category, url }) => {
       )
     case "moving-image":
       return (
-        <video data-type="video" controls style={{width: "90%"}}>
+        <video className="viewer" data-type="video" controls>
           <source type="video/mp4" src={url} />
           <p>
             Your browser doesn&apos;t support HTML5 video. <a href={url} download>Download</a> the video instead.
@@ -96,15 +96,15 @@ export default async function ItemDetail({ params }) {
 
   return (
     <div className="grid">
-      <div className="mb-20" style={{gridColumnStart: 1, gridColumnEnd: `span 12`}}>
+      <div className="mb-20" className="item-page__header">
         <h1 className="mb-10">{data.title}</h1>
         <Note notes={scopeContent} />
       </div>
-      <div style={{gridColumnStart: 1, gridColumnEnd: `span 9`}}>
+      <div className="item-page__viewer">
         <Viewer category={data.category} url={itemUrl} />
         <DownloadButton url={itemUrl} />
       </div>
-      <div style={{gridColumnStart: 10, gridColumnEnd: `span 3`}}>
+      <div className="item-page__more-info">
         {data.category != 'catalogued-reports' && <Metadata notes={metadataNotes} />}
         <DimesLink dimesId={data.dimes_id}/>
       </div>
