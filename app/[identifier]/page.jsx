@@ -14,7 +14,7 @@ const Viewer = ({ category, url }) => {
   switch (category) {
     case "catalogued-reports":
       return (
-      <object data={url} type="application/pdf" style={{width: "90%", height: "100vh"}}>
+      <object className="viewer" data={url} type="application/pdf" style={{height: "100vh"}}>
         <p>
           Your browser doesn&apos;t support object embedding. <a href={url}>Download</a> the PDF instead.
         </p>
@@ -22,7 +22,7 @@ const Viewer = ({ category, url }) => {
     )
     case "audio":
       return (
-        <audio data-type="audio" controls style={{width: "90%"}}>
+        <audio className="viewer" data-type="audio" controls>
           <source src={url} type="audio/mp3" />
           <p>
             Your browser doesn&apos;t support HTML5 audio. <a href={url} download>Download</a> the audio instead.
@@ -31,7 +31,7 @@ const Viewer = ({ category, url }) => {
       )
     case "moving-image":
       return (
-        <video data-type="video" controls style={{width: "90%"}}>
+        <video className="viewer" data-type="video" controls>
           <source type="video/mp4" src={url} />
           <p>
             Your browser doesn&apos;t support HTML5 video. <a href={url} download>Download</a> the video instead.
