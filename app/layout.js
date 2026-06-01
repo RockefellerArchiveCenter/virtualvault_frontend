@@ -2,10 +2,14 @@ import "./globals.css";
 import Link from "next/link";
 
 import Footer from "./components/Footer";
+import MatomoTagManager from "./components/MatomoTagManager";
 
 export default function Template({ children }) {
   return (
     <html lang="en">
+      <head>
+        <MatomoTagManager />
+      </head>
       <body>
         <div id="root">
           <Link href="#main" className="skip-link">
