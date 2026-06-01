@@ -96,7 +96,7 @@ export default async function ItemDetail({ params }) {
 
   return (
     <div className="grid">
-      <div className="mb-20 item-page__header">
+      <div className="mb-20" className="item-page__header">
         <h1 className="mb-10">{data.title}</h1>
         <Note notes={scopeContent} />
       </div>
