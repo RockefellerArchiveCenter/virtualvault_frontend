@@ -11,9 +11,13 @@ const ResultView = ({result}) => {
   return (
     
 <li className="mb-20">
-    <h2 className="mb-10"><a href={result.url.raw} dangerouslySetInnerHTML={{ __html: sanitizedContent }}></a></h2>
-    <span className="badge badge--blue">{result.category.raw}</span>
-  </li>
+  <div className="result__wrapper">
+    <h3 className="mb-0 mt-0">
+      <a href={result.url.raw} dangerouslySetInnerHTML={{ __html: sanitizedContent }}></a>
+    </h3>
+    <span className="badge badge--blue ml-10">{result.category.raw}</span>
+  </div>
+</li>
 )};
 
 export default ResultView

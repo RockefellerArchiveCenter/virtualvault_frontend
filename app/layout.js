@@ -1,6 +1,8 @@
 import "./globals.css";
 import Link from "next/link";
 
+import Footer from "./components/Footer";
+
 export default function Template({ children }) {
   return (
     <html lang="en">
@@ -36,6 +38,7 @@ export default function Template({ children }) {
             <main id="main">{children}</main>
           </div>
         </div>
+        <Footer/>
       </body>
     </html>
   );
