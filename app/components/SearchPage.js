@@ -47,14 +47,17 @@ export default function SearchPage() {
 
         <PagingInfo />
 
+        <h2 className="mt-20 mb-10">Results</h2>
         <Results
-          titleField="title"
-          urlField="url"
           resultView={ResultView}
-          className="list--unstyled"
+          className="list--unstyled mt-0"
         />
 
-        <Paging />
+        <Paging 
+          className="pagination__list"
+          prevIcon={<span aria-hidden="true" className="material-icon">keyboard_arrow_left</span>}
+          nextIcon={<span aria-hidden="true" className="material-icon">keyboard_arrow_right</span>}
+        />
       </div>
     </SearchProvider>
   );

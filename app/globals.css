@@ -27,3 +27,14 @@
   grid-column-start: 10;
   grid-column-end: span 3;
 }
+
+.result__wrapper {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.pagination__list {
+  display: flex;
+  align-items: center;
+}
