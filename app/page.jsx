@@ -1,5 +1,5 @@
-import SearchPage from "./components/SearchPage";
+import HomePage from "./components/HomePage";
 
 export default function Page() {
-  return <SearchPage />;
+  return <HomePage />;
 }

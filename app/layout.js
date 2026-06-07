@@ -23,18 +23,6 @@ export default function Template({ children }) {
                     Virtual Vault
                   </Link>
                 </div>
-                <nav className="nav-right" aria-label="Main">
-                  <div className="nav__list">
-                    <div className="nav__item btn--navy">
-                      <Link className="nav__link" href="/">
-                        Search
-                        <span className="material-icon" aria-hidden="true">
-                          arrow_right_alt
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </nav>
               </div>
             </div>
           </header>
