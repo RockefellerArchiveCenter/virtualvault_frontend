@@ -5,6 +5,16 @@
   margin-bottom: 30px;
 }
 
+.home-search__wrapper {
+  margin-bottom: 10rem;
+  display: flex;
+  justify-content: center;
+}
+
+.home-search__form {
+  width: 60%;
+}
+
 .viewer {
   width: 90%;
 }
