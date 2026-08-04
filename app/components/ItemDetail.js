@@ -69,7 +69,7 @@ const Metadata = ({notes}) => {
 }
 
 const DimesLink = ({dimesId}) => (
-  <a className="btn btn--md btn--blue" href={`https://dimes.rockarch.org/objects/${dimesId}`}>
+  <a className="btn btn--md btn--blue" href={`${process.env.DIMES_HOST}/objects/${dimesId}`}>
     View in DIMES
   </a>
 )
