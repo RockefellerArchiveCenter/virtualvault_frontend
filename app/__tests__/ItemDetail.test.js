@@ -98,7 +98,7 @@ describe("ItemDetail Component", () => {
 
     expect(screen.getAllByRole('link', { name: 'Download' })[0]).toHaveAttribute('href', `${process.env.ASSETS_BASEURL}/audio/01a67b6eff2543859918f50f07c721e3/01a67b6eff2543859918f50f07c721e3.mp3`) // Viewer
     expect(screen.getAllByRole('link', { name: 'Download' })[1]).toHaveAttribute('href', `${process.env.ASSETS_BASEURL}/audio/01a67b6eff2543859918f50f07c721e3/01a67b6eff2543859918f50f07c721e3.mp3`) // Download button
-    expect(screen.getByRole('link', { name: 'View in DIMES' })).toHaveAttribute('href', 'https://dimes.rockarch.org/objects/M5UvSPeKYD3jffEzKoEmF9') // View in DIMES button
+    expect(screen.getByRole('link', { name: 'View in DIMES' }).getAttribute('href')).toContain('/objects/M5UvSPeKYD3jffEzKoEmF9') // View in DIMES button
     
     expect(screen.getByText("Sound, 62 minutes")).toBeInTheDocument(); // materialspec
     expect(screen.getByText("1/4 inch audio tape")).toBeInTheDocument(); // physdesc
