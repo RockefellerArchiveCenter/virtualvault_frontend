@@ -1,0 +1,11 @@
+services:
+  frontend:
+    build: .
+    environment:
+      - ELASTICSEARCH_HOST=http://index:9200
+      - ELASTICSEARCH_INDEX=default
+      - ASSETS_BASEURL=http://localhost:8000
+      - DIMES_HOST=https://dimes.rockarch.org
+      - API_HOST=https://api.rockarch.org
+    ports:
+      - 3000:3000
