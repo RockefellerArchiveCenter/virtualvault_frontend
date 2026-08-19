@@ -85,7 +85,9 @@ export default function ItemDetail({ data, assetUrl }) {
         <Note notes={scopeContent} />
       </div>
       <div className="item-page__viewer">
-        <Viewer category={data.category} url={assetUrl} />
+        <div className="item-page__viewer-wrapper">
+          <Viewer category={data.category} url={assetUrl} />
+        </div>
         <DownloadButton url={assetUrl} />
       </div>
       <div className="item-page__more-info">
