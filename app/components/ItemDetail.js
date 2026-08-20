@@ -59,7 +59,7 @@ const Metadata = ({notes}) => {
   return (
     <dl className="summary-list">
       {notes.map(n => (
-        <div key={n.content.toString()} className="summary-list__row">
+        <div key={n.persistent_id.toString()} className="summary-list__row">
           <dt className="summary-list__key">{noteTitle(n.type)}</dt>
           <dd className="summary-list__value">{n.content}</dd>
         </div>

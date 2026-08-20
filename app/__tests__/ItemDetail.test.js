@@ -45,7 +45,7 @@ const data = {
             rights_restriction: {
                 local_access_restriction_type: []
             },
-            persistent_id: "1f9fc8cac75e81f2545211cd096abd43",
+            persistent_id: "1f9fc8cac75e81f2545211cd096abd44",
             subnotes: [
                 {
                     jsonmodel_type: "note_text",
@@ -80,7 +80,7 @@ const data = {
             content: [
                 "phystech note"
             ],
-            persistent_id: "f302d0f6c33cb5bb4999c1232efddf58",
+            persistent_id: "f302d0f6c33cb5bb4999c1232efddf59",
             publish: true
         }
     ]
