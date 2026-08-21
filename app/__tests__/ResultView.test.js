@@ -3,7 +3,7 @@ import "@testing-library/jest-dom";
 import ResultView from "../components/ResultView";
 
 const resultData = {
-    "title": {"snippet": "Item title"}, 
+    "title": {"raw": "Item title"}, 
     "url": {"raw": "https://example.org"},
     "category": {"raw": "moving-image"}
 }
