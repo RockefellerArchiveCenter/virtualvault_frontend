@@ -48,7 +48,7 @@ export default function SearchPage() {
 
         <PagingInfo />
 
-        <h2 className="mt-20 mb-10">Results</h2>
+        <h1 className="mt-20 mb-10">Search results</h1>
         <Results
           resultView={ResultView}
           className="list--unstyled mt-0"
