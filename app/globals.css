@@ -32,6 +32,17 @@
   grid-column: 2 / span 10;
 }
 
+.pagination__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.pagination__list {
+  display: flex;
+  align-items: center;
+}
+
 .viewer {
   width: 90%;
 }
@@ -57,11 +68,6 @@
 
 .result__wrapper {
   margin-bottom: 1.5rem;
-  display: flex;
-  align-items: center;
-}
-
-.pagination__list {
   display: flex;
   align-items: center;
 }

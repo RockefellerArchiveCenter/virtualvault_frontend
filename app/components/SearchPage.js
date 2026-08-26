@@ -10,6 +10,7 @@ import {
 
 import { searchConfig } from "@/lib/search/config";
 import { useSearchRouting } from "@/lib/search/useSearchRouting";
+import Pagination from "@/app/components/Pagination";
 import ResultView from "@/app/components/ResultView";
 
 export default function SearchPage() {
@@ -48,23 +49,18 @@ export default function SearchPage() {
         </div>
         </div>
 
-        <PagingInfo />
-
         <div className="container grid">
           <div className="search-results__wrapper">
+            <Pagination />
             <h1 className="mt-20 mb-10">Search results</h1>
             <Results
               resultView={ResultView}
               className="list--unstyled mt-0"
             />
+            <Pagination />
           </div>
         </div>
 
-        <Paging 
-          className="pagination__list"
-          prevIcon={<span aria-hidden="true" className="material-icon">keyboard_arrow_left</span>}
-          nextIcon={<span aria-hidden="true" className="material-icon">keyboard_arrow_right</span>}
-        />
     </SearchProvider>
   );
 }
