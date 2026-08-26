@@ -3,9 +3,6 @@
 import {
   SearchProvider,
   SearchBox,
-  Results,
-  Paging,
-  PagingInfo,
 } from "@elastic/react-search-ui";
 
 import { searchConfig } from "@/lib/search/config";
