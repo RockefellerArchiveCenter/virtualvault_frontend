@@ -43,6 +43,10 @@
   align-items: center;
 }
 
+.item-page__wrapper {
+  grid-column: 2 / span 10;
+}
+
 .viewer {
   width: 90%;
 }
