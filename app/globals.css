@@ -1,7 +1,7 @@
 @import url("https://assets.rockarch.org/v2.0.9/main.min.css");
 
 #main {
-  grid-column: 2 / span 10;
+  grid-column: span 12;
   margin-bottom: 30px;
 }
 
@@ -17,6 +17,11 @@
 
 .home-search__form {
   width: 60%;
+}
+
+.search__wrapper {
+  padding: 24px 10%;
+  background-color: #ebeff4;
 }
 
 .viewer {

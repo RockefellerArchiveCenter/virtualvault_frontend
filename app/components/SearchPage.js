@@ -17,7 +17,7 @@ export default function SearchPage() {
 
   return (
     <SearchProvider config={config}>
-      <div>
+      <div className="search__wrapper">
         <SearchBox 
           view={({ value, onChange, onSubmit }) => (
           <form onSubmit={onSubmit}>
@@ -44,6 +44,7 @@ export default function SearchPage() {
           </form>
         )}
         />
+        </div>
 
         <PagingInfo />
 
@@ -58,7 +59,6 @@ export default function SearchPage() {
           prevIcon={<span aria-hidden="true" className="material-icon">keyboard_arrow_left</span>}
           nextIcon={<span aria-hidden="true" className="material-icon">keyboard_arrow_right</span>}
         />
-      </div>
     </SearchProvider>
   );
 }

@@ -26,7 +26,7 @@ export default function Template({ children }) {
               </div>
             </div>
           </header>
-          <div className="container grid">
+          <div className="container--full-width grid">
             <main id="main">{children}</main>
           </div>
         </div>
