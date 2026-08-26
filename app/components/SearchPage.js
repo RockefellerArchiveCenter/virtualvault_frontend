@@ -17,7 +17,8 @@ export default function SearchPage() {
 
   return (
     <SearchProvider config={config}>
-      <div className="search__wrapper">
+      <div className="search-bar grid">
+        <div className="search-inputs__wrapper">
         <SearchBox 
           view={({ value, onChange, onSubmit }) => (
           <form onSubmit={onSubmit}>
@@ -45,14 +46,19 @@ export default function SearchPage() {
         )}
         />
         </div>
+        </div>
 
         <PagingInfo />
 
-        <h1 className="mt-20 mb-10">Search results</h1>
-        <Results
-          resultView={ResultView}
-          className="list--unstyled mt-0"
-        />
+        <div className="container grid">
+          <div className="search-results__wrapper">
+            <h1 className="mt-20 mb-10">Search results</h1>
+            <Results
+              resultView={ResultView}
+              className="list--unstyled mt-0"
+            />
+          </div>
+        </div>
 
         <Paging 
           className="pagination__list"

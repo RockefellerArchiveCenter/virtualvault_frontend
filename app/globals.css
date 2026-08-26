@@ -19,9 +19,17 @@
   width: 60%;
 }
 
-.search__wrapper {
-  padding: 24px 10%;
+.search-results__wrapper {
+  grid-column: 2 / span 10;
+}
+
+.search-bar {
+  padding: 24px 0;
   background-color: #ebeff4;
+}
+
+.search-inputs__wrapper {
+  grid-column: 2 / span 10;
 }
 
 .viewer {
