@@ -5,6 +5,10 @@
   margin-bottom: 30px;
 }
 
+.hero {
+  margin-top: 100px
+}
+
 .home-search__wrapper {
   margin-bottom: 10rem;
   display: flex;
