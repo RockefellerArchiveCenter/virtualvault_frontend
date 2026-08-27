@@ -32,12 +32,15 @@
 }
 
 .search-bar {
-  padding: 24px 0;
   background-color: #ebeff4;
 }
 
 .search-inputs__wrapper {
   grid-column: 2 / span 10;
+  @media screen and (min-width: 64em) {
+    grid-column: 4 / span 6;
+  }
+
 }
 
 .result__wrapper {

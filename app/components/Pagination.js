@@ -9,10 +9,10 @@ const PagingInfoView = ({ end, start, totalResults}) => {
         totalResults ? (
             <div className="pagination__info">
                 Showing{" "}
-                <strong>
+                <span className="text--bold">
                     {start} - {end}
-                </strong>{" "}
-                out of <strong>{totalResults}</strong>
+                </span>{" "}
+                out of <span className="text--bold">{totalResults}</span>
             </div>
         ) : (null)
     );
