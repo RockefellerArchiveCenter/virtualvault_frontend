@@ -2,13 +2,9 @@ const ResultView = ({ result }) => {
 
   return (
       <li className="card">
-        <div className="card__body">
-          <h2 className="card__title">
-            <a className="card__title" href={result.url.raw}>{result.title.raw}</a>
-          </h2>
-          <p className="card__body-text">
-            <span className="badge badge--blue ml-10">{result.category.raw}</span>
-          </p>
+        <a className="card__title" href={result.url.raw}>{result.title.raw}</a>
+        <div class="card__footer">
+          <span className="badge badge--blue">{result.category.raw}</span>
         </div>
       </li>
   )
