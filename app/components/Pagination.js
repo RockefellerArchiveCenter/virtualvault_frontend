@@ -20,7 +20,7 @@ const PagingInfoView = ({ end, start, totalResults}) => {
 
 
 const Pagination = () => (
-    <div className="pagination__wrapper">
+    <div className="pagination__wrapper mb-30">
         <PagingInfo view={PagingInfoView}/>
         <Paging 
             className="pagination__list"

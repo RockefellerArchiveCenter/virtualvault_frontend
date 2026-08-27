@@ -80,7 +80,7 @@ export default function ItemDetail({ data, assetUrl }) {
 
   return (
     <div className="grid">
-      <div className="item-page__wrapper grid">
+      <div className="item-page__wrapper grid mb-30">
         <div className="mb-20 item-page__header">
           <h1 className="mb-10">{data.title}</h1>
           <Note notes={scopeContent} />
