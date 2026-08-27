@@ -4,12 +4,14 @@ import {
   SearchProvider,
   SearchBox,
   Results,
+  WithSearch,
 } from "@elastic/react-search-ui";
 
 import { searchConfig } from "@/lib/search/config";
 import { useSearchRouting } from "@/lib/search/useSearchRouting";
 import Pagination from "@/app/components/Pagination";
 import ResultView from "@/app/components/ResultView";
+import ResultsView from "@/app/components/ResultsView";
 
 export default function SearchPage() {
   const config = useSearchRouting(searchConfig);
@@ -50,11 +52,18 @@ export default function SearchPage() {
         <div className="container grid">
           <div className="search-results__wrapper">
             <Pagination />
-            <h1 className="mt-20 mb-10">Search results</h1>
-              <Results
-                resultView={ResultView}
-                className="card-list"
-              />
+            <WithSearch mapContextToProps={({ searchTerm }) => ({ searchTerm })}>
+              {({ searchTerm }) => (
+                <>
+                  <h1 className="mt-20 mb-10">Search results for "{searchTerm}"</h1>
+                  <Results
+                    resultView={ResultView}
+                    view={ResultsView}
+                    searchTerm={searchTerm}
+                  />
+                </>
+              )}
+            </WithSearch>
             <Pagination />
           </div>
         </div>
