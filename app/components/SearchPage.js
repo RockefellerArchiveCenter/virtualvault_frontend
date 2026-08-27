@@ -28,7 +28,7 @@ export default function SearchPage() {
               <div className="input input__search">
                 <label 
                   htmlFor="query" 
-                  className="visually-hidden">Enter a search term *</label>
+                  className="visually-hidden">Enter a search term</label>
                 <input 
                   id="query" 
                   placeholder="Search..." 
@@ -39,8 +39,9 @@ export default function SearchPage() {
               </div>
               <button 
                 type="submit" 
-                className="btn btn--orange search__submit-btn" 
-                aria-label="Submit search"> Search <span className="material-icon material-icon--space-before" aria-hidden="true">search</span></button>
+                className="btn btn--orange search__submit-btn">Search
+                <span className="material-icon material-icon--space-before" aria-hidden="true">search</span>
+              </button>
             </div>
           </div>
           </form>
