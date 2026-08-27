@@ -58,6 +58,13 @@
   align-items: center;
 }
 
+.rc-pagination-item {
+  padding: 0 5px;
+  @media screen and (min-width: 64em) {
+    padding: 0 7px;
+  }
+}
+
 .card-list {
   @media screen and (min-width: 36.25em) {
     grid-template-columns: repeat(3, 1fr);
