@@ -53,7 +53,7 @@ export default function SearchPage() {
         <div className="container grid">
           <div className="search-results__wrapper">
             <WithSearch mapContextToProps={({ resultSearchTerm }) => ({ resultSearchTerm })}>
-              {({ resultSearchTerm }) => (<h1 className="mt-20 mb-10">Search results for &quot;{resultSearchTerm}&quot;</h1>)}
+              {({ resultSearchTerm }) => (<h1 className="mt-30 mb-0">Search results for &quot;{resultSearchTerm}&quot;</h1>)}
             </WithSearch>
             <Pagination />
             <WithSearch mapContextToProps={({ resultSearchTerm }) => ({ resultSearchTerm })}>
@@ -65,7 +65,9 @@ export default function SearchPage() {
                   />
               )}
             </WithSearch>
-            <Pagination />
+            <div className="mb-30">
+              <Pagination />
+            </div>
           </div>
         </div>
 
