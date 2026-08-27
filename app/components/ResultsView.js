@@ -8,7 +8,7 @@ function ResultsView({
               {children}
           </ul>
       ) : (
-          <p>Sorry, there are no search results for "{resultSearchTerm}"</p>
+          <p>Sorry, there are no search results for &quot;{resultSearchTerm}&quot;</p>
       )    
   );
 }
