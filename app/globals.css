@@ -7,6 +7,11 @@
 
 /* Home page */
 
+.home-page__wrapper {
+  display: grid;
+  background-color: #f6f6f4;
+}
+
 .hero {
   margin-top: 100px
 }

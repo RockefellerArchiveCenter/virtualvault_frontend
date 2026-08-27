@@ -13,7 +13,7 @@ export default function HomePage() {
   const config = useSearchRouting(searchConfig);
 
   return (
-    <>
+    <div className="home-page__wrapper">
       <Hero/>
       <SearchProvider config={config}>
         <div className="home-search__wrapper">
@@ -49,6 +49,6 @@ export default function HomePage() {
 
         </div>
       </SearchProvider>
-    </>
+    </div>
   );
 }
