@@ -48,7 +48,10 @@
 }
 
 .viewer {
-  width: 90%;
+  width: 100%;
+  @media screen and (min-width: 64em) {
+    width: 90%;
+  }
 }
 
 .full-height {
@@ -61,13 +64,19 @@
 }
 
 .item-page__viewer {
-  grid-column-start: 1;
-  grid-column-end: span 9;
+  margin-bottom: 10px;
+  grid-column-end: span 12;
+  @media screen and (min-width: 64em) {
+    grid-column-end: span 9;
+  }
 }
 
 .item-page__more-info {
-  grid-column-start: 10;
-  grid-column-end: span 3;
+  grid-column-end: span 12;
+  @media screen and (min-width: 64em) {
+    grid-column-start: 10;
+    grid-column-end: span 3;
+  }
 }
 
 .result__wrapper {
