@@ -4,19 +4,17 @@ import {
 } from "@elastic/react-search-ui";
 
 
-const PagingInfoView = ({className,
-  end,
-  searchTerm,
-  start,
-  totalResults}) => {
+const PagingInfoView = ({ end, start, totalResults}) => {
     return (
-        <div className="pagination__info">
-        Showing{" "}
-        <strong>
-            {start} - {end}
-        </strong>{" "}
-        out of <strong>{totalResults}</strong>
-        </div>
+        totalResults ? (
+            <div className="pagination__info">
+                Showing{" "}
+                <strong>
+                    {start} - {end}
+                </strong>{" "}
+                out of <strong>{totalResults}</strong>
+            </div>
+        ) : (null)
     );
 }
 
@@ -26,6 +24,7 @@ const Pagination = () => (
         <PagingInfo view={PagingInfoView}/>
         <Paging 
             className="pagination__list"
+            resultsPerPage={24}
             prevIcon={<span aria-hidden="true" className="material-icon">keyboard_arrow_left</span>}
             nextIcon={<span aria-hidden="true" className="material-icon">keyboard_arrow_right</span>}
         />
@@ -33,3 +32,5 @@ const Pagination = () => (
 )
 
 export default Pagination
+
+

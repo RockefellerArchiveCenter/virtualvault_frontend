@@ -52,14 +52,13 @@ export default function SearchPage() {
         <div className="container grid">
           <div className="search-results__wrapper">
             <Pagination />
-            <WithSearch mapContextToProps={({ searchTerm }) => ({ searchTerm })}>
-              {({ searchTerm }) => (
+            <WithSearch mapContextToProps={({ resultSearchTerm }) => ({ resultSearchTerm })}>
+              {({ resultSearchTerm }) => (
                 <>
-                  <h1 className="mt-20 mb-10">Search results for "{searchTerm}"</h1>
                   <Results
                     resultView={ResultView}
                     view={ResultsView}
-                    searchTerm={searchTerm}
+                    resultSearchTerm={resultSearchTerm}
                   />
                 </>
               )}
