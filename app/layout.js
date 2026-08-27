@@ -22,6 +22,9 @@ export default function Template({ children }) {
                   <Link href="/" className="header__brand-title">
                     Virtual Vault
                   </Link>
+                  <div className="header__brand-subtitle">
+                    Access digitized records
+                  </div>
                 </div>
               </div>
             </div>
