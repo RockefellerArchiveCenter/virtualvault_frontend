@@ -41,7 +41,7 @@ const Viewer = ({ category, url }) => {
 }
 
 const DownloadButton = ({ url }) => (
-  <a className="btn btn--md btn--blue" href={url}>Download</a>
+  <a className="btn btn--md btn--orange mb-10" href={url}>Download</a>
 )
 
 const noteTitle = (noteType) => {
@@ -69,7 +69,7 @@ const Metadata = ({notes}) => {
 }
 
 const DimesLink = ({dimesId}) => (
-  <a className="btn btn--md btn--blue" href={`${process.env.DIMES_HOST}/objects/${dimesId}`}>
+  <a className="btn btn--md btn--blue mr-10 mb-10" href={`${process.env.DIMES_HOST}/objects/${dimesId}`}>
     View in DIMES
   </a>
 )
@@ -80,19 +80,21 @@ export default function ItemDetail({ data, assetUrl }) {
 
   return (
     <div className="grid">
-      <div className="mb-20 item-page__header">
-        <h1 className="mb-10">{data.title}</h1>
-        <Note notes={scopeContent} />
-      </div>
-      <div className="item-page__viewer">
-        <div className="item-page__viewer-wrapper">
-          <Viewer category={data.category} url={assetUrl} />
+      <div className="item-page__wrapper grid mb-30">
+        <div className="mb-20 item-page__header">
+          <h1 className="mb-10">{data.title}</h1>
+          <Note notes={scopeContent} />
         </div>
-        <DownloadButton url={assetUrl} />
-      </div>
-      <div className="item-page__more-info">
-        {data.category != 'catalogued-reports' && <Metadata notes={metadataNotes} />}
-        <DimesLink dimesId={data.dimes_id}/>
+        <div className="item-page__viewer">
+          <div className="item-page__viewer-wrapper">
+            <Viewer category={data.category} url={assetUrl} />
+          </div>
+        </div>
+        <div className="item-page__more-info">
+          {data.category != 'catalogued-reports' && <Metadata notes={metadataNotes} />}
+          <DimesLink dimesId={data.dimes_id}/>
+          <DownloadButton url={assetUrl} />
+        </div>
       </div>
     </div>
   )

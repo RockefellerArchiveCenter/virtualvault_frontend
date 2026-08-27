@@ -4,20 +4,22 @@ import {
   SearchProvider,
   SearchBox,
   Results,
-  Paging,
-  PagingInfo,
+  WithSearch,
 } from "@elastic/react-search-ui";
 
 import { searchConfig } from "@/lib/search/config";
 import { useSearchRouting } from "@/lib/search/useSearchRouting";
+import Pagination from "@/app/components/Pagination";
 import ResultView from "@/app/components/ResultView";
+import ResultsView from "@/app/components/ResultsView";
 
 export default function SearchPage() {
   const config = useSearchRouting(searchConfig);
 
   return (
     <SearchProvider config={config}>
-      <div>
+      <div className="search-bar grid">
+        <div className="search-inputs__wrapper">
         <SearchBox 
           view={({ value, onChange, onSubmit }) => (
           <form onSubmit={onSubmit}>
@@ -26,7 +28,7 @@ export default function SearchPage() {
               <div className="input input__search">
                 <label 
                   htmlFor="query" 
-                  className="visually-hidden">Enter a search term *</label>
+                  className="visually-hidden">Enter a search term</label>
                 <input 
                   id="query" 
                   placeholder="Search..." 
@@ -37,28 +39,36 @@ export default function SearchPage() {
               </div>
               <button 
                 type="submit" 
-                className="btn btn--orange search__submit-btn" 
-                aria-label="Submit search"> Search <span className="material-icon material-icon--space-before" aria-hidden="true">search</span></button>
+                className="btn btn--orange search__submit-btn">Search
+                <span className="material-icon material-icon--space-before" aria-hidden="true">search</span>
+              </button>
             </div>
           </div>
           </form>
         )}
         />
+        </div>
+        </div>
 
-        <PagingInfo />
+        <div className="container grid">
+          <div className="search-results__wrapper">
+            <WithSearch mapContextToProps={({ resultSearchTerm }) => ({ resultSearchTerm })}>
+              {({ resultSearchTerm }) => (<h1 className="mt-20 mb-10">Search results for &quot;{resultSearchTerm}&quot;</h1>)}
+            </WithSearch>
+            <Pagination />
+            <WithSearch mapContextToProps={({ resultSearchTerm }) => ({ resultSearchTerm })}>
+              {({ resultSearchTerm }) => (
+                  <Results
+                    resultView={ResultView}
+                    view={ResultsView}
+                    resultSearchTerm={resultSearchTerm}
+                  />
+              )}
+            </WithSearch>
+            <Pagination />
+          </div>
+        </div>
 
-        <h2 className="mt-20 mb-10">Results</h2>
-        <Results
-          resultView={ResultView}
-          className="list--unstyled mt-0"
-        />
-
-        <Paging 
-          className="pagination__list"
-          prevIcon={<span aria-hidden="true" className="material-icon">keyboard_arrow_left</span>}
-          nextIcon={<span aria-hidden="true" className="material-icon">keyboard_arrow_right</span>}
-        />
-      </div>
     </SearchProvider>
   );
 }

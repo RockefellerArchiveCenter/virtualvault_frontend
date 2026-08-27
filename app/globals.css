@@ -1,8 +1,18 @@
-@import url("https://assets.rockarch.org/v2.0.9/main.min.css");
+@import url("https://assets.rockarch.org/v2.0.10/main.min.css");
 
 #main {
-  grid-column: 2 / span 10;
-  margin-bottom: 30px;
+  grid-column: span 12;
+}
+
+/* Home page */
+
+.home-page__wrapper {
+  display: grid;
+  background-color: #f6f6f4;
+}
+
+.hero {
+  margin-top: 100px
 }
 
 .home-search__wrapper {
@@ -15,8 +25,69 @@
   width: 60%;
 }
 
+/* Search results page */
+
+.search-results__wrapper {
+  grid-column: 2 / span 10;
+}
+
+.search-bar {
+  background-color: #ebeff4;
+}
+
+.search-inputs__wrapper {
+  grid-column: 2 / span 10;
+  @media screen and (min-width: 64em) {
+    grid-column: 4 / span 6;
+  }
+
+}
+
+.result__wrapper {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.pagination__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.pagination__list {
+  display: flex;
+  align-items: center;
+}
+
+.rc-pagination-item {
+  padding: 0 5px;
+  @media screen and (min-width: 64em) {
+    padding: 0 7px;
+  }
+}
+
+.card-list {
+  @media screen and (min-width: 36.25em) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (min-width: 64em) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Item page */
+
+.item-page__wrapper {
+  grid-column: 2 / span 10;
+}
+
 .viewer {
-  width: 90%;
+  width: 100%;
+  @media screen and (min-width: 64em) {
+    width: 90%;
+  }
 }
 
 .full-height {
@@ -29,22 +100,17 @@
 }
 
 .item-page__viewer {
-  grid-column-start: 1;
-  grid-column-end: span 9;
+  margin-bottom: 10px;
+  grid-column-end: span 12;
+  @media screen and (min-width: 64em) {
+    grid-column-end: span 9;
+  }
 }
 
 .item-page__more-info {
-  grid-column-start: 10;
-  grid-column-end: span 3;
-}
-
-.result__wrapper {
-  margin-bottom: 1.5rem;
-  display: flex;
-  align-items: center;
-}
-
-.pagination__list {
-  display: flex;
-  align-items: center;
+  grid-column-end: span 12;
+  @media screen and (min-width: 64em) {
+    grid-column-start: 10;
+    grid-column-end: span 3;
+  }
 }

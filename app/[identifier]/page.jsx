@@ -12,6 +12,15 @@ const constructAssetUrl = (category, itemId) => {
   }
 }
 
+export async function generateMetadata({ params, searchParams }, parent) {
+  const { identifier } = await params;
+  const data = await fetchDocument(identifier)
+ 
+  return {
+    title: data.title,
+  }
+}
+
 export default async function DetailPage({ params }) {
   const { identifier } = await params;
   const data = await fetchDocument(identifier)

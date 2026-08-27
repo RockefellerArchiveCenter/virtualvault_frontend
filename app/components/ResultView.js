@@ -1,15 +1,13 @@
-const ResultView = ({result}) => {
+const ResultView = ({ result }) => {
 
   return (
-    
-<li className="mb-20">
-  <div className="result__wrapper">
-    <h3 className="mb-0 mt-0">
-      <a href={result.url.raw}>{result.title.raw}</a>
-    </h3>
-    <span className="badge badge--blue ml-10">{result.category.raw}</span>
-  </div>
-</li>
-)};
+      <li className="card">
+        <a className="card__title" href={result.url.raw}>{result.title.raw}</a>
+        <div class="card__footer">
+          <span className="badge badge--blue">{result.category.raw}</span>
+        </div>
+      </li>
+  )
+};
 
 export default ResultView
