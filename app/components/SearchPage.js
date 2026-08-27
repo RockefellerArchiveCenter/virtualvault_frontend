@@ -51,10 +51,10 @@ export default function SearchPage() {
           <div className="search-results__wrapper">
             <Pagination />
             <h1 className="mt-20 mb-10">Search results</h1>
-            <Results
-              resultView={ResultView}
-              className="list--unstyled mt-0"
-            />
+              <Results
+                resultView={ResultView}
+                className="card-list"
+              />
             <Pagination />
           </div>
         </div>

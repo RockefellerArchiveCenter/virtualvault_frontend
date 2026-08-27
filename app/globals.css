@@ -5,6 +5,8 @@
   margin-bottom: 30px;
 }
 
+/* Home page */
+
 .hero {
   margin-top: 100px
 }
@@ -19,6 +21,8 @@
   width: 60%;
 }
 
+/* Search results page */
+
 .search-results__wrapper {
   grid-column: 2 / span 10;
 }
@@ -32,6 +36,12 @@
   grid-column: 2 / span 10;
 }
 
+.result__wrapper {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
 .pagination__wrapper {
   display: flex;
   align-items: center;
@@ -42,6 +52,18 @@
   display: flex;
   align-items: center;
 }
+
+.card-list {
+  @media screen and (min-width: 36.25em) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (min-width: 64em) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Item page */
 
 .item-page__wrapper {
   grid-column: 2 / span 10;
@@ -77,10 +99,4 @@
     grid-column-start: 10;
     grid-column-end: span 3;
   }
-}
-
-.result__wrapper {
-  margin-bottom: 1.5rem;
-  display: flex;
-  align-items: center;
 }
