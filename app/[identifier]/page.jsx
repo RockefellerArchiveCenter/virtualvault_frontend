@@ -17,7 +17,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
   const data = await fetchDocument(identifier)
  
   return {
-    title: `{data.title} - Virtual Vault`,
+    title: `${data.title} - Virtual Vault`,
   }
 }
 
