@@ -22,7 +22,9 @@ jobs:
         with:
           node-version: 'lts/*'
       - name: update
-        run: yarn install && yarn upgrade
+        run: |
+          yarn install --ignore-scripts
+          yarn upgrade
 
       - name: Run GitHub Actions Version Updater
         uses: saadmk11/github-actions-version-updater@v0.9.0
