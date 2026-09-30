@@ -1,6 +1,6 @@
 export async function fetchDocument(identifier) {
-  const hostName = "http://localhost:9200"
-  const indexName = "default"
+  const hostName = `${process.env.ELASTICSEARCH_HOST}`
+  const indexName = `${process.env.ELASTICSEARCH_INDEX}`
 
   try {
     const res = await fetch(`${hostName}/${indexName}/_doc/${identifier}`);

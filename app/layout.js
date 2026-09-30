@@ -1,9 +1,15 @@
 import "./globals.css";
 import Link from "next/link";
 
+import Footer from "./components/Footer";
+import MatomoTagManager from "./components/MatomoTagManager";
+
 export default function Template({ children }) {
   return (
     <html lang="en">
+      <head>
+        <MatomoTagManager />
+      </head>
       <body>
         <div id="root">
           <Link href="#main" className="skip-link">
@@ -16,26 +22,18 @@ export default function Template({ children }) {
                   <Link href="/" className="header__brand-title">
                     Virtual Vault
                   </Link>
-                </div>
-                <nav className="nav-right" aria-label="Main">
-                  <div className="nav__list">
-                    <div className="nav__item btn--navy">
-                      <Link className="nav__link" href="/">
-                        Search
-                        <span className="material-icon" aria-hidden="true">
-                          arrow_right_alt
-                        </span>
-                      </Link>
-                    </div>
+                  <div className="header__brand-subtitle">
+                    Access digitized records
                   </div>
-                </nav>
+                </div>
               </div>
             </div>
           </header>
-          <div className="container grid">
+          <div className="container--full-width grid">
             <main id="main">{children}</main>
           </div>
         </div>
+        <Footer/>
       </body>
     </html>
   );
