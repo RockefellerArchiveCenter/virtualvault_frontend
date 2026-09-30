@@ -1,10 +1,7 @@
 const Note = ({ notes }) => (
   notes.map(noteData => {
-    if (noteData.jsonmodel_type == 'note_multipart') {
-      return noteData.subnotes.map(s => (<p key={s.content.toString()}>{s.content}</p>))
-    } else if (noteData.jsonmodel_type == 'note_singlepart') {
-      return <p key={noteData.content.toString()}>{noteData.content}</p>
-    }
+    const content = noteContent(noteData)
+    return <p key={content}>{content}</p>
   })
 )
 
@@ -55,13 +52,20 @@ const noteTitle = (noteType) => {
   }
 }
 
+const noteContent = (noteData) => {
+  if (noteData.jsonmodel_type == 'note_multipart') {
+    return noteData.subnotes.map(s => s.content).join(" ")
+  } else if (noteData.jsonmodel_type == 'note_singlepart') {
+    return noteData.content
+  }}
+
 const Metadata = ({notes}) => {
   return (
     <dl className="summary-list">
       {notes.map(n => (
         <div key={n.persistent_id.toString()} className="summary-list__row">
           <dt className="summary-list__key">{noteTitle(n.type)}</dt>
-          <dd className="summary-list__value">{n.content}</dd>
+          <dd className="summary-list__value">{noteContent(n)}</dd>
         </div>
       ))}
     </dl>

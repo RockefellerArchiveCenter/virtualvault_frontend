@@ -75,10 +75,14 @@ const data = {
             publish: true
         },
         {
-            jsonmodel_type: "note_singlepart",
+            jsonmodel_type: "note_multipart",
             type: "phystech",
-            content: [
-                "phystech note"
+            subnotes: [
+                {
+                    jsonmodel_type: "note_text",
+                    publish: true,
+                    content: "phystech note"
+                }
             ],
             persistent_id: "f302d0f6c33cb5bb4999c1232efddf59",
             publish: true
