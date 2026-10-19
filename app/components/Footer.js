@@ -12,43 +12,18 @@ const Footer = () => (
             Archive Center
           </span>
         </h2>
-        <div className="footer-primary__address">
-          <p className="footer-primary__text">
-            15 Dayton Avenue
-            <br />
-            Sleepy Hollow, New York 10591
-          </p>
-          <p className="footer-primary__text">
-            Phone: (914) 366-6300
-            <br />
-            Fax: (914) 631-6017
-            <br />
-            E-mail:
-            <a className="footer-primary__link" href="mailto:archive@rockarch.org">
-              archive@rockarch.org
-            </a>
-          </p>
+        <div class="footer-primary__address">
+          <p class="footer-primary__text">15 Dayton Avenue<br/>Sleepy Hollow, New York 10591</p>
+          <p class="footer-primary__text">Phone: (914) 366-6300<br/>Fax: (914) 631-6017<br/>E-mail: <a class="footer-primary__link" href="mailto:archive@rockarch.org">archive@rockarch.org</a></p>
+          <a class="footer-primary__link" href="https://rockarch.org/collections/access-and-request-materials/holiday-schedule/">See holiday schedule</a>
         </div>
-        <div className="footer-primary__reading-room">
-          <p className="footer-primary__text">Reading Room Hours:</p>
-          <p className="footer-primary__text">
-            Monday-Friday
-            <br />
-            9:30 a.m. to 5:00 p.m.
-            <br />
-            <a
-              className="footer-primary__link"
-              href="https://rockarch.org/collections/access-and-request-materials/">
-              How to access and request materials
-            </a>
-            .
+        <div class="footer-primary__reading-room">
+          <p class="footer-primary__text">Reading Room Hours:</p>
+          <p class="footer-primary__text">
+            From October 1 to March 31:<br/>Tuesday to Friday, 9:30 a.m. to 5:00 p.m.<br/>
+            From April 1 to September 30:<br/>Monday to Friday, 9:30 a.m. to 5:00 p.m.<br/>
           </p>
-          <a
-            className="footer-primary__link"
-            href="https://rockarch.org/collections/access-and-request-materials/holiday-schedule/"
-          >
-            See holiday schedule
-          </a>
+          <a class="footer-primary__link" href="https://rockarch.org/collections/access-and-request-materials/">How to access and request materials</a>.</p>
         </div>
         <div className="footer-primary__social">
           <div className="social-icons">
